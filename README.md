@@ -12,12 +12,11 @@ If you have some problem with install, you can try to install vstor_redist.exe.
 
 ### Installing
 
-Goto bin/release and download all files of the directory.
-Then, just execute .vsto file.
+Clone or download every files and build it via Visual Studio.
 
 ## Running the tests
 
-Clone or download every files and use Visutl Studio Community or higher.
+Same as Installing
 
 ## Deployment
 
