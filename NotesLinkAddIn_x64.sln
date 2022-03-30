@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesLinkAddIn_x64", "NotesLinkAddIn_x64.csproj", "{4A5DB88D-D136-4F80-BDB2-99AE38F885B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A5DB88D-D136-4F80-BDB2-99AE38F885B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5DB88D-D136-4F80-BDB2-99AE38F885B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5DB88D-D136-4F80-BDB2-99AE38F885B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5DB88D-D136-4F80-BDB2-99AE38F885B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45C6570F-AF57-49DD-A4B1-FFF34760FD5E}
+	EndGlobalSection
+EndGlobal
