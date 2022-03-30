@@ -34,7 +34,7 @@ Please read [CONTRIBUTING.md]() for details on our code of conduct, and the proc
 
 ## Authors
 
-* **Ryosuke Narimoto** - *Initial work* - [PurpleBooth](https://github.com/r-nari)
+* **Ryosuke Narimoto** - *Initial work* - [r-nari](https://github.com/r-nari)
 
 ## License
 
