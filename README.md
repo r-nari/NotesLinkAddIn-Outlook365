@@ -13,6 +13,8 @@ If you have some problem with install, you can try to install vstor_redist.exe.
 ### Installing
 
 Clone or download every files and build it via Visual Studio.
+or
+Goto [Releases](https://github.com/r-nari/NotesLinkAddIn-Outlook365/releases) to get install files.
 
 ## Running the tests
 
