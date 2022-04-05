@@ -85,13 +85,10 @@ namespace NotesLinkAddIn_x64
             if (arr.Length > index + 19 && flag && Regex.Split(arr[index + 19], "[/=]").Length > 1)
             {
                 notes_link = notes_link + Regex.Split(arr[index + 19], "[/=]")[1] + "/" + arr[index + 3] + arr[index + 4] + "/0/" + arr[index + 13].Substring(2) + arr[index + 14] + arr[index + 15].Substring(2) + arr[index + 16];
-                Thread t = new Thread(new ParameterizedThreadStart(setClipboardText));
-                t.SetApartmentState(ApartmentState.STA);
-                t.Start(notes_link);
-                t.Join();
+                ClipboardHelper.CopyToClipboard("<a href=\"" + notes_link + "\">NotesLink</a>", notes_link);
                 SendKeys.Send("^v");
                 await Task.Delay(1000);
-                t = new Thread(new ParameterizedThreadStart(setClipboardText));
+                Thread t = new Thread(new ParameterizedThreadStart(setClipboardText));
                 t.SetApartmentState(ApartmentState.STA);
                 t.Start(raw_link);
                 t.Join();
