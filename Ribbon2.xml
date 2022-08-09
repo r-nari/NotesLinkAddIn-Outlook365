@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+	<ribbon>
+		<tabs>
+			<tab idMso="TabNewMailMessage" visible="true">
+				<group id="NotesLink1" label="NotesLink">
+					<button id="button1" onAction="Button1_Click" keytip="K" screentip="Paste NotesLink" label="Notes" showImage="true" getImage="GetImage" size="large" />
+				</group>
+			</tab>
+			<tab idMso="TabAppointment">
+				<group id="NotesLink2" label="NotesLink">
+					<button id="button2" onAction="Button1_Click" keytip="K" screentip="Paste NotesLink" label="Notes" showImage="true" getImage="GetImage" size="large" />
+				</group>
+			</tab>
+			<tab idMso="TabMail">
+				<group id="NotesLink3" label="NotesLink">
+					<button id="button3" onAction="Button1_Click" keytip="K" screentip="Paste NotesLink" label="Notes" showImage="true" getImage="GetImage" size="large" />
+				</group>
+			</tab>
+			<tab idMso="TabTask">
+				<group id="NotesLink4" label="NotesLink">
+					<button id="button4" onAction="Button1_Click" keytip="K" screentip="Paste NotesLink" label="Notes" showImage="true" getImage="GetImage" size="large" />
+				</group>
+			</tab>
+		</tabs>
+		<contextualTabs>
+			<tabSet idMso="TabComposeTools">
+				<tab idMso="TabMessage">
+					<group id="NotesLink5" label="NotesLink">
+						<button id="button5" onAction="Button1_Click" keytip="K" screentip="Paste NotesLink" label="Notes" showImage="true" getImage="GetImage" size="large" />
+					</group>
+				</tab>
+			</tabSet>
+		</contextualTabs>
+	</ribbon>
+</customUI>

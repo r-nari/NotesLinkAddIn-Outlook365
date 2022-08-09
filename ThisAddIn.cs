@@ -21,9 +21,10 @@ namespace NotesLinkAddIn_x64
         }
         protected override Office.IRibbonExtensibility CreateRibbonExtensibilityObject()
         {
-            return Globals.Factory.GetRibbonFactory().CreateRibbonManager(
-                new Microsoft.Office.Tools.Ribbon.IRibbonExtension[] { new Ribbon1() }
-            );
+            //return Globals.Factory.GetRibbonFactory().CreateRibbonManager(
+            //    new Microsoft.Office.Tools.Ribbon.IRibbonExtension[] { new Ribbon1() }
+            //);
+            return new Ribbon2();
         }
 
         public static ThisAddIn instance = null;
@@ -47,7 +48,8 @@ namespace NotesLinkAddIn_x64
         String pattern = "[-<:> ]";
         String[] arr = { };
         int index = -1;
-        bool flag = false;
+        int REPLICA, NOTE, HINT = -1;
+        int flag = -1;
         bool onProcessing = false;
         IDataObject iData = null;
 
@@ -71,20 +73,33 @@ namespace NotesLinkAddIn_x64
             }
             arr = Regex.Split(raw_link, pattern);
             index = -1;
-            flag = false;
+            REPLICA = -1;
+            NOTE = -1;
+            HINT = -1;
+            flag = -2;
             foreach (String value in arr)
             {
                 index++;
-                if (value == "NDL")
+                if (value == "REPLICA")
                 {
-                    flag = true;
-                    break;
+                    REPLICA = index;
+                    flag++;
+                }
+                if (value == "NOTE")
+                {
+                    NOTE = index;
+                    flag++;
+                }
+                if (value == "HINT")
+                {
+                    HINT = index;
+                    flag++;
                 }
             }
             notes_link = "Notes://";
-            if (arr.Length > index + 19 && flag && Regex.Split(arr[index + 19], "[/=]").Length > 1)
+            if (flag == 1)
             {
-                notes_link = notes_link + Regex.Split(arr[index + 19], "[/=]")[1] + "/" + arr[index + 3] + arr[index + 4] + "/0/" + arr[index + 13].Substring(2) + arr[index + 14] + arr[index + 15].Substring(2) + arr[index + 16];
+                notes_link = notes_link + Regex.Split(arr[HINT+1], "[/=]")[1] + "/" + arr[REPLICA + 1] + arr[REPLICA + 2] + "/0/" + arr[NOTE+1].Substring(2) + arr[NOTE + 2] + arr[NOTE + 3].Substring(2) + arr[NOTE + 4];
                 ClipboardHelper.CopyToClipboard("<a href=\"" + notes_link + "\">NotesLink</a>", notes_link);
                 SendKeys.Send("^v");
                 await Task.Delay(1000);
